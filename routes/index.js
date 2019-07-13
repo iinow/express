@@ -1,8 +1,8 @@
 var express = require('express');
 var router = express.Router();
 var path = require('path');
-let logger = require('../src/main/logger')
-let db = require('../src/main/db')
+let logger = require('../config/logger')
+let db = require('../config/db')
 
 const TAG = path.basename(__filename)
 

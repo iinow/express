@@ -2,7 +2,7 @@ var express = require('express');
 var router = express.Router();
 var path = require('path');
 const TAG = path.basename(__filename)
-let logger = require('../src/main/logger')
+let logger = require('../config/logger')
 
 /* GET users listing. */
 router.get('', (req, res, next) => {

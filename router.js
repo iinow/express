@@ -7,11 +7,11 @@ let logger = require('morgan');
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 // let router = express.Router()
-const db = require('./src/main/db')
-db.connect()
+const db = require('./config/db')
+// db.connect()
 var app = express();
 
-let log = require('./src/main/logger')
+let log = require('./config/logger')
 // const TAG = path.basename(__filename)
 
 // view engine setup

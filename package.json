@@ -3,9 +3,10 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "node ./bin/www",
+    "start": "node ./config/main.js",
     "log": "set DEBUG=express:* & npm start",
-    "debug2": "node --inspect ./bin/www"
+    "debug": "node --inspect ./config/main.js",
+    "test": "mocha"
   },
   "dependencies": {
     "cookie-parser": "~1.4.4",
@@ -18,6 +19,8 @@
   },
   "devDependencies": {
     "date-utils": "^1.2.21",
+    "mocha": "^6.1.4",
+    "should": "^13.2.3",
     "winston": "^3.2.1",
     "winston-daily-rotate-file": "^3.9.0"
   }
