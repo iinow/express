@@ -13,7 +13,7 @@ const logger = winston.createLogger({
     transports: [
         new winston.transports.File({
             filename: 'log/system.log',
-            zippedArchive: true,
+            // zippedArchive: true,
             format: combine(
                 timestamp(),
                 myFormat

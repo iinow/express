@@ -1,5 +1,5 @@
 let { should } = require('should')
-let assert = require('assert')
+let { assert } = require('assert')
 // (5).should.be.exactly(5)
 
 describe('Array', function() {

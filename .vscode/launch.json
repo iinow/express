@@ -6,6 +6,12 @@
     "configurations": [
         {
             "type": "node",
+            "request": "launch",
+            "name": "test 돌리기!",
+            "program": "${workspaceFolder}/test/ex/http/cookie2.js"
+        },
+        {
+            "type": "node",
             "request": "attach",
             "name": "Express 디버깅하자",
             "port": 9229
