@@ -1,29 +1,20 @@
 #!/usr/bin/env node
+require('module-alias').addAlias('~', __dirname)
 
-/**
- * Module dependencies.
- */
-
-var app = require('./router');
+var app = require('~/router');
 var debug = require('debug')('express:server');
 var http = require('http');
+// let OAuth2Server = require('oauth2-server')
 
-/**
- * Get port from environment and store in Express.
- */
+// new OAuth2Server({
+//   model: "",
+//   refreshTokenLifetime: ""
+// })
 
 var port = normalizePort(process.env.PORT || '3000');
 app.set('port', port);
 
-/**
- * Create HTTP server.
- */
-
 var server = http.createServer(app);
-
-/**
- * Listen on provided port, on all network interfaces.
- */
 
 server.listen(port);
 server.on('error', onError);

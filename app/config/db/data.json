@@ -1,0 +1,23 @@
+{
+    "user": "root",
+    "password": "qlalfqjsghekd",
+    "database": "oauth2",
+    "options": {
+        "host": "192.168.167.15",
+        "dialect": "mysql",
+        "timezone": "+09:00",
+        "define": {
+            "charset": "utf8",
+            "dialectOptions": {
+                "collate": "utf8"
+            }
+        },
+        "pool": {
+            "min": 0,
+            "max": 10,
+            "idle": 10000,
+            "acquire": 10000
+        },
+        "port": "3307"
+    }
+}

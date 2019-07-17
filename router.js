@@ -4,14 +4,13 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 let logger = require('morgan');
 
-var indexRouter = require('./app/routes/index');
-var usersRouter = require('./app/routes/users');
+var indexRouter = require('~/app/routes/index');
+var usersRouter = require('~/app/routes/users');
 // let router = express.Router()
-const db = require('./app/config/db')
+// const db = require('~/app/config/db')
 // db.connect()
 var app = express();
-require('main')
-let log = require('./app/config/logger')
+let log = require('~/app/config/logger')
 // const TAG = path.basename(__filename)
 
 // view engine setup
