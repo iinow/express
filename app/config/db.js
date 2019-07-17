@@ -6,7 +6,7 @@ let connection = mysql.createConnection({
     database: 'test',
     port: 3307
 })
-
+require('~/')
 // connection.connect()
 // let qry = connection.query({
 //     sql: 'SELECT * FROM board'

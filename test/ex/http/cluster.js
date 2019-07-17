@@ -23,3 +23,8 @@ if(cluster.isMaster){
     }, 1000)
     console.log(`${process.pid}번 워커 실행`)
 }
+
+const Runner = (abc) => {
+    return abc * 10
+}
+

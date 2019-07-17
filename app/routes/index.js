@@ -37,4 +37,12 @@ router.get('/select', (req, res, next)=>{
   })
 })
 
+router.patch('/datas/:id', (req, res) => {
+  const p = req.params
+  const body = req.body
+  console.log(JSON.stringify(p))
+  console.log(JSON.stringify(body))
+  res.sendStatus(301)
+})
+
 module.exports = router;

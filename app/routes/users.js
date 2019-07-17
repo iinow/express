@@ -7,11 +7,12 @@ let logger = require('../config/logger')
 /* GET users listing. */
 router.get('', (req, res, next) => {
   // res.send('respond with a resource')
-  // let json = {'name':'haha'}
+  let json = {'name':'haha'}
   // res.send(JSON.stringify(json))
 
   //문자열 전송
-  res.send("Hello world!!")
+  // res.send("Hello world!!")
+  res.json(json)
 
   //JSON 객체 전송
   // res.json()

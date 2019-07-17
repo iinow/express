@@ -3,9 +3,9 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "node ./config/main.js",
+    "start": "node ./main.js",
     "log": "set DEBUG=express:* & npm start",
-    "debug": "node --inspect ./config/main.js",
+    "debug": "node --inspect ./main.js",
     "test": "mocha"
   },
   "dependencies": {
