@@ -24,6 +24,7 @@
   "devDependencies": {
     "date-utils": "^1.2.21",
     "mocha": "^6.1.4",
+    "nodemon": "^1.19.1",
     "should": "^13.2.3",
     "winston": "^3.2.1",
     "winston-daily-rotate-file": "^3.9.0"
