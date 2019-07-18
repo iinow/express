@@ -10,7 +10,8 @@
             "charset": "utf8",
             "dialectOptions": {
                 "collate": "utf8"
-            }
+            },
+            "timestamps": true
         },
         "pool": {
             "min": 0,

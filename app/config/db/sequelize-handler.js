@@ -3,6 +3,9 @@
 const { Sequelize } = require('sequelize')
 const json = require('./data.json')
 
+/**
+ * @param define.timestamps default value = true, true 이면 createdAt, updatedAt 값이 생긴다.
+ */
 class SequelizeHandler {
     constructor() {
         this.oauth2 = new Sequelize({
