@@ -54,7 +54,10 @@ router.post('/oauth/token', async (req, res, next) => {
   const response = new Response(res)
 
   try{
-    res.json(await oauth.token(request, response))
+    res.json(await oauth.token(request, response, {
+      accessTokenLifetime: 1209600,
+      refreshTokenLifetime: 9999999
+    }))
   }catch(e){
     console.log(e)
     next(e)

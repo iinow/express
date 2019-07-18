@@ -30,7 +30,7 @@
             "type": "node",
             "request": "launch",
             "name": "Express start",
-            "program": "${workspaceFolder}\\bin\\www"
+            "program": "${workspaceFolder}/index.js"
         }
     ]
 }
