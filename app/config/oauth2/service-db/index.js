@@ -4,6 +4,9 @@ const path = require('path');
 const SequelizeModel = require('~/app/config/db/sequelize-model');
 const { oauth2 } = require('~/app/config/db/sequelize-handler');
 
+/**
+ * @Bean ServiceDB 
+ */
 class ServiceDB extends SequelizeModel {
   constructor() {
     super(path.join(__dirname, 'models'), oauth2);

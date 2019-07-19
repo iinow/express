@@ -18,6 +18,10 @@ router.get('/', function(req, res, next) {
   logger.info(`${TAG}, get home page 부분`)
 })
 
+router.get('/oauth', (req, res) => {
+  res.send(req.query.code)
+})
+
 router.get('/test', (req, res, next) => {
   res.render('index', {title: 'Express ㅠㅠㅠ'})
 

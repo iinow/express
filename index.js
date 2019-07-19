@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 require('module-alias').addAlias('~', __dirname)
 
-var app = require('~/router');
+var app = require('~/app/router');
 var debug = require('debug')('express:server');
 var http = require('http');
 // let OAuth2Server = require('oauth2-server')
@@ -11,7 +11,7 @@ var http = require('http');
 //   refreshTokenLifetime: ""
 // })
 
-var port = normalizePort(process.env.PORT || '3000');
+var port = normalizePort(process.env.PORT || '80');
 app.set('port', port);
 
 var server = http.createServer(app);
@@ -19,10 +19,6 @@ var server = http.createServer(app);
 server.listen(port);
 server.on('error', onError);
 server.on('listening', onListening);
-
-/**
- * Normalize a port into a number, string, or false.
- */
 
 function normalizePort(val) {
   var port = parseInt(val, 10);
@@ -39,10 +35,6 @@ function normalizePort(val) {
 
   return false;
 }
-
-/**
- * Event listener for HTTP server "error" event.
- */
 
 function onError(error) {
   if (error.syscall !== 'listen') {
@@ -67,10 +59,6 @@ function onError(error) {
       throw error;
   }
 }
-
-/**
- * Event listener for HTTP server "listening" event.
- */
 
 function onListening() {
   var addr = server.address();
