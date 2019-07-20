@@ -39,8 +39,45 @@ server.on('error', onError);
 server.on('listening', onListening);
 
 async function initDB(){
-  await db.Admin.sync()
+  // let user = new db.Admin()
+  // user.fullName = "how can i do?"
+  // user.desc = "wtf!!"
+  // await user.save()
+  
+  let u = await db.Admin.findByPk(1)
+  console.log(JSON.stringify(u))
 
+  // db.Admin.findAll({
+  //   where: {
+
+  //   },
+  //   include: [
+  //       {model: db.memos, as: 'memoes'}
+  //     ]
+  // })
+
+  // await db.Admin.sync()
+  // let u = await db.Admin.findOne({
+  //   where: {
+  //     idx: 1
+  //   }
+  // })
+
+  // u.fullName = "hao"
+  // u.desc = "abcdedf"
+  // await u.save()
+
+  // let cnt = await db.Admin.update({
+  //   name: "bishop",
+  //   description: "jjangyoman"
+  // }, {
+  //   where:{
+  //     idx: 1
+  //   }
+  // })
+  // console.log(`업데이트 개수 : ${cnt}`)
+
+  /*
   let user = new db.Admin()
   user.name = "시fdfdd바"
   user.description = "난가2222?dddd"
@@ -50,6 +87,7 @@ async function initDB(){
   let u = await db.Admin.create(user)
   console.log(JSON.stringify(u))
   console.log(u.idx)
+  */
   // let admins = await db.Admin.findAll()/
   // console.log(JSON.stringify(admins[0].id))
   // console.log(JSON.stringify(admins[0].fullName))

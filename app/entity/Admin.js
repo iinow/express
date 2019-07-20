@@ -14,23 +14,23 @@ class Admin extends Model {
         return this.getDataValue('name')
     }
 
-    // set fullName(name) {
-    //     // this.setDataValue('name', "시밢..")
-    //     this.setAttributes('name', name)
-    //     this.set('name', name)
-    // }
+    set fullName(name) {
+        this.setDataValue('name', name)
+        // this.setAttributes('name', name)
+        // this.set('name', name)
+    }
 
     get desc() {
         return this.getDataValue('description')
     }
 
-    // set desc(description) {
-    //     // this.setDataValue('description', "지ㅔ발")
-    //     this.setAttributes('description', description)
-    //     this.set('description', description)
-    // }
+    set desc(description) {
+        this.setDataValue('description', description)
+        // this.setAttributes('description', description)
+        // this.set('description', description)
+    }
 }
-
+//Admin.hasMany()
 Admin.init({
     idx: {
         primaryKey: true,
