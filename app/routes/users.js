@@ -32,5 +32,10 @@ router.get('/test', (req, res, next) => {
   res.send(`__dirname: ${__dirname}, filename:  ${__filename}`)
 })
 
+router.get('/test/:id', (req, res) => {
+  const id = req.params.id
+  return res.send(`요청한 값: ${id}`)
+})
+
 
 module.exports = router;
