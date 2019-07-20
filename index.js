@@ -39,15 +39,21 @@ server.on('error', onError);
 server.on('listening', onListening);
 
 async function initDB(){
-  await db.Admin.sync({force: true})
-  await db.Admin.create({
-    idx: 1,
-    name: "hahah",
-    description: '내용추가'
-  })
-  
-  let admins = await db.Admin.findAll()
-  console.log(JSON.stringify(admins))
+  await db.Admin.sync()
+
+  let user = new db.Admin()
+  user.name = "시fdfdd바"
+  user.description = "난가2222?dddd"
+  console.log(user.getDataValue('idx'))
+  console.log(user.getDataValue('name'))
+  console.log(user.getDataValue('description'))
+  let u = await db.Admin.create(user)
+  console.log(JSON.stringify(u))
+  console.log(u.idx)
+  // let admins = await db.Admin.findAll()/
+  // console.log(JSON.stringify(admins[0].id))
+  // console.log(JSON.stringify(admins[0].fullName))
+  // console.log(JSON.stringify(admins[0].description))
 }
 
 initDB()
