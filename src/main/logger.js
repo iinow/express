@@ -5,7 +5,7 @@ const { timestamp, combine, printf } = winston.format
 // Date.prototype.toFormat()
 
 const myFormat = printf(({ level, message, timestamp }) => {
-    return `${timestamp} [${level}]: ${message}`;    // log 출력 포맷 정의
+    return `${timestamp} [${level.toUpperCase()}]: ${message}`;    // log 출력 포맷 정의
 })
 
 const logger = winston.createLogger({

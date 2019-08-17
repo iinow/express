@@ -6,7 +6,9 @@ let logger = require('morgan');
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
-
+// let router = express.Router()
+const db = require('./src/main/db')
+db.connect()
 var app = express();
 
 let log = require('./src/main/logger')
@@ -24,9 +26,17 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
+// app.use('v1', router)
+
+app.use((req, res, next) => {
+  log.info('인증 작업.......')
+  next()
+})
+
 
 // catch 404 and forward to error handler
 app.use((req, res, next) => {
+  log.info('로깅 작업.....')
   next(createError(404));
 });
 
