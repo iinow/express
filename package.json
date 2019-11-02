@@ -21,7 +21,7 @@
     "mysql2": "^1.6.5",
     "oauth2-server": "^3.0.1",
     "pug": "2.0.0-beta11",
-    "sequelize": "^5.10.1"
+    "sequelize": "^5.15.1"
   },
   "devDependencies": {
     "date-utils": "^1.2.21",
